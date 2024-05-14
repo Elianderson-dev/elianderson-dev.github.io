@@ -19,7 +19,7 @@ html {
     font-size: 60%;
     overflow-y: hidden;
 }
-body{
+body {
     background: var(--bg-color);
     color: var(--text-color);
 }
@@ -35,4 +35,17 @@ header {
      justify-content: space-between;
      align-items: center;
      z-index: 5;
+}
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.logo span {
+    text-shadow: 0 0 25px var(--main-color)
 }
