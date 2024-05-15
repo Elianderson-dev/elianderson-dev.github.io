@@ -62,3 +62,61 @@ header {
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
 }
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
+}
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 3rem;
+}
+span {
+    color: var(--main-color);
+}
+.logo span {
+    color: var(--main-color);
+}
+.home-content h3 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+}
+.home-content h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+.home-img {
+    border-radius: 50%;
+}
+.home-img img {
+    --s: 32vw;   /* the size of the image */
+    --b: 8px;     /* the border thickness*/
+    --g: 3px;    /* the gap */
+    --c: #4ECDC4; /* the color */
+
+    aspect-ratio: 0;
+    outline: calc(var(--s)/2) solid #0009;
+    outline-offset: calc(var(--s)/-2);
+    transition: 0.3s;
+    position: relative;
+    top: 3rem;
+    width: 32vw;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.home-img img:hover {
+  outline: var(--b) solid var(--c);
+  outline-offset: var(--g);
+}
