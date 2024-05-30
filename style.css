@@ -190,3 +190,103 @@ span {
     background-color: var(--main-color);
     color: #000000;
 }
+
+@keyframes typing {
+    0.0000%, 27.3488% { content: ""; }
+    1.1395%, 26.2093% { content: "D"; }
+    2.2791%, 25.0698% { content: "De"; }
+    3.4186%, 23.9302% { content: "Dev"; }
+    4.5581%, 22.7907% { content: "Deve"; }
+    5.6977%, 21.6512% { content: "Devel"; }
+    6.8372%, 20.5116% { content: "Develo"; }
+    7.9767%, 19.3721% { content: "Develop"; }
+    9.1163%, 18.2326% { content: "Develope"; }
+    10.2558%, 17.0930% { content: "Developer"; }
+  
+    30.7674%, 55.2791% { content: ""; }
+    31.9070%, 54.1395% { content: "T"; }
+    32.0465%, 53.0000% { content: "Te"; }
+    33.1860%, 52.8605% { content: "Tec"; }
+    34.3256%, 51.7209% { content: "Tech"; }
+    35.4651%, 50.6239% { content: "Tech "; }
+    36.6047%, 49.4419% { content: "Tech L"; }
+    37.6047%, 48.3859% { content: "Tech Lo"; }
+    38.6047%, 47.2456% { content: "Tech Lov"; }
+    39.9047%, 46.1423% { content: "Tech Love"; }
+    40.9047%, 45.9945% { content: "Tech Lover"; }
+  
+    54.6977%, 78.2093% { content: ""; }
+    55.8372%, 77.0698% { content: "F"; }
+    56.9767%, 76.9302% { content: "Fr"; }
+    58.1163%, 75.7907% { content: "Free"; }
+    59.2558%, 74.6512% { content: "Freel"; }
+    60.3953%, 73.5116% { content: "Freela"; }
+    61.5349%, 72.3721% { content: "Freelan"; }
+    62.5349%, 71.2234% { content: "Freelanc"; }
+    63.5349%, 70.3721% { content: "Freelance"; }
+    64.5349%, 69.3346% { content: "Freelancer"; }
+  
+    78.6279%, 98.8605% { content: ""; }
+    79.7674%, 97.7209% { content: "S"; }
+    80.9070%, 96.5814% { content: "St"; }
+    82.0465%, 95.4419% { content: "Stu"; }
+    83.1860%, 94.3023% { content: "Stud"; }
+    84.3256%, 93.1628% { content: "Stude"; }
+    85.3256%, 92.2451% { content: "Studen"; }
+    86.3256%, 91.5032% { content: "Student"; }
+  }
+
+.text-animation {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+    white-space: nowrap;
+}
+.text-animation span {
+    position: relative;
+}
+.text-animation span::before {
+    content: "";
+    color: var(--main-color);
+    animation: typing 12s infinite;
+}
+.text-animation span::after {
+    content: "";
+    background-color: var(--bg-color);
+    position: relative;
+    height: 100%;
+    left: 5px;
+    border-left: 3px solid  var(--bg-color);
+    animation: cursor 0.6s infinite;
+}
+
+@media (prefers-reduced-motion) {
+    .text-animation span::after {
+        animation: none;
+    }
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid var(--main-color);
+    }
+}
+.heading {
+    font-size: 8rem;
+    text-align: center;
+    margin: 5rem 0;  
+}
+.education {
+    padding: 100px 15px;
+    background: var(--second-bg-color); 
+}
+.education h2 {
+    margin-bottom: 5rem;
+}
+.timeline-items {
+    max-width: 120px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    position: relative;
+}
