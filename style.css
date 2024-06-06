@@ -6,7 +6,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: "Poppins","sans-serif";
+    font-family: "Poppins","sans";
 }
 :root {
     --bg-color: #080808;
@@ -43,7 +43,7 @@ header {
 .logo {
     font-size: 3rem;
     color: var(--text-color);
-    font-weight: 300;
+    font-weight: 800;
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -298,7 +298,7 @@ span {
 }
 .timeline-item {
     margin-bottom: 40px;
-    width: 1200px;
+    width: 100%;
     position: relative;
 }
 .timeline-item:last-child {
@@ -333,7 +333,7 @@ span {
     border: 3px solid var(--main-color);
     padding: 30px 50px;
     border-radius: 4rem;
-    box-shadow: 0 0 50px var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
     cursor: pointer;
     transition: 0.3 ease-in-out;
 }
@@ -374,4 +374,27 @@ span {
     background-color: #3d3d3d;
     display: block;
     border-style: solid ;
+}
+
+.services {
+    background: var(--bg-color);
+    color: #000000;
+}
+.services h2 {
+    margin-bottom: 5rem;
+    color: #ffffff;
+}
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.service-box {
+    background-color: var(--main-color);
+    height: 300px;
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
 }
