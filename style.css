@@ -398,3 +398,29 @@ span {
     cursor: pointer;
     transition: 0.4s ease-in-out;
 }
+.service-box:hover {
+    background: #ffffff;
+    color: #000000;
+    border: 5px solid var(--main-color);
+    transform: scale(1.03);
+}
+.services-box .service-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 200px;
+    justify-content: left;
+    align-items: baseline;
+    padding: 5rem 5 rem;
+}
+.service-info h4 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 2;
+}
+.service-info p {
+    font-size: 1.0rem;
+    font-weight: 600;
+    max-height: 1.7;
+    margin: auto;
+}
