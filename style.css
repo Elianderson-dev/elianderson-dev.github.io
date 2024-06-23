@@ -609,3 +609,25 @@ span {
         grid-template-columns: repeat(1,1fr);
     }
 }
+@media(max-width:420px) {
+    html {
+        font-size: 33%;
+    }
+    .home {
+        margin-top: -170px;
+    }
+    .home-content {
+        width: 230px;
+        overflow-x: hidden;
+    }
+    .home-content h1 {
+        font-size: 37px;
+        font-weight: 900;
+    }
+}
+@media(max-height:742px) {
+    .home-img img {
+        position: relative;
+        margin-top: 40rem;
+    }
+}
