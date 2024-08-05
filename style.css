@@ -11,6 +11,7 @@
 :root {
     --bg-color: #080808;
     --second-bg-color: #131313;
+    --box-color: #313131;
     --text-color: white;
     --main-color: #00ffee;
     --s: 32vw;   /* the size of the image */
@@ -384,12 +385,13 @@ span {
 }
 .services-container {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat();
     align-items: center;
     gap: 2.5rem;
 }
 .service-box {
-    background-color: var(--main-color);
+    background-color: var(--box-color);
+    color: var(--main-color);
     height: 300px;
     border-radius: 3rem;
     border: 5px solid transparent;
@@ -397,10 +399,13 @@ span {
     transition: 0.4s ease-in-out;
 }
 .service-box:hover {
-    background: #ffffff;
-    color: #000000;
+    background: var(--main-color);
+    color: var(--box-color);
     border: 5px solid var(--main-color);
     transform: scale(1.03);
+    .service-info i {
+        color: var(--box-color)
+    }
 }
 .services-box .service-info {
     display: flex;
@@ -421,6 +426,20 @@ span {
     font-weight: 600;
     max-height: 1.7;
     margin: auto;
+}
+.service-info i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7.5rem;
+    height: 7.5rem;
+    background: transparent;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+    font-size: 5.5rem;
+    color: var(--main-color);
+    margin: 14rem auto;
+    transition: 0.3s ease-in-out;
+    transform-style: preserve-3d;
 }
 .contact {
     background-color: var(--bg-color);
@@ -549,6 +568,9 @@ span {
     .services {
         padding-bottom: 7rem;
     }
+    .services-box {
+        flex: auto;
+    }
     .contact form {
         flex-direction: column;
     }
@@ -618,7 +640,6 @@ span {
     }
     .home-content {
         width: 230px;
-        overflow-x: hidden;
     }
     .home-content h1 {
         font-size: 37px;
